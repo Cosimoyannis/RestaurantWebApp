@@ -20,7 +20,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     OidcClientInitiatedLogoutSuccessHandler oidcLogoutSuccessHandler() {
         OidcClientInitiatedLogoutSuccessHandler successHandler = new OidcClientInitiatedLogoutSuccessHandler(clientRegistrationRepository);
-        successHandler.setPostLogoutRedirectUri(URI.create("https://cosimospage.herokuapp.com/"));
+        successHandler.setPostLogoutRedirectUri(URI.create("https://restaurant-web-app-cosimo.herokuapp.com/"));
         return successHandler;
     }
 
@@ -33,7 +33,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                         HttpMethod.GET,
                         Endpoints.HOMEPAGE,
                         Endpoints.TEST,
-                        Endpoints.SPEISEKARTE
+                        Endpoints.SPEISEKARTE,
+                        Endpoints.CREATEPRODUCT,
+                        Endpoints.LISTPRODUCTS
 
                 ).permitAll()
                 .antMatchers(

@@ -49,6 +49,9 @@ public class HTMLController {
     @GetMapping(path = Endpoints.NAVTEST)
     public String navtest() {return "navtest";}
 
+    @GetMapping(path = Endpoints.TABLESELECT)
+    public String tableselect() {return "tableselect";}
+
     @GetMapping(path = Endpoints.PRODUCTS)
     String products(Model model) {
 

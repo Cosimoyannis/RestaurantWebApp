@@ -11,13 +11,13 @@ import java.util.List;
 public class ProductServiceImpl implements ProductService {
 
 
-    private final RestTemplate restTemplate;
+//    private final RestTemplate restTemplate;
     private final ProductRepository productRepository;
 
 
 
-    public ProductServiceImpl(RestTemplate restTemplate, ProductRepository productRepository) {
-        this.restTemplate = restTemplate;
+    public ProductServiceImpl(ProductRepository productRepository) {
+//        this.restTemplate = restTemplate;
         this.productRepository = productRepository;
     }
 

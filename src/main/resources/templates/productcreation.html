@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml" >
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.83.1">
+  <title>PriceCart</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sign-in/">
+
+
+
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+
+
+  <!-- Custom styles for this template -->
+  <link href="css/signin.css" rel="stylesheet">
+  <link href="css/headers.css" rel="stylesheet">
+
+</head>
+
+
+
+
+
+<body class="text-center">
+
+
+<main class="form-signin">
+
+
+  <form action="#" th:action="@{/createproduct}" th:object="${product}" method="post">
+    <a href="/">
+    <img class="ill"  src="bilder/logo.png"
+         style = "width: 70%; top: 1000px ;"
+    >
+    </a>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <h1 class="h3 mb-3 fw-normal">Produkt hinzufügen</h1>
+
+    <div class="form-floating">
+      <input type="text" class="form-control" id="floatingDate" placeholder="01.01.2023" th:field="*{date}" >
+      <label for="floatingDate">Datum</label>
+    </div>
+
+    <br>
+
+    <div class="form-floating">
+      <input type="text" class="form-control" id="floatingTime" placeholder="12:00" th:field="*{time}" >
+      <label for="floatingTime">Uhrzeit</label>
+    </div>
+
+    <br>
+
+    <div class="form-floating">
+      <input type="text" class="form-control" id="floatingPersonCount" th:field="*{personCount}" >
+      <label for="floatingPersonCount">Personen Anzahl</label>
+    </div>
+
+    <br>
+
+    <div class="form-floating">
+      <input type="text" class="form-control" id="floatingName" placeholder="Name" th:field="*{name}" >
+      <label for="floatingName">dein Name</label>
+    </div>
+
+
+
+    <br>
+    <br>
+
+
+
+   <button class="w-100 btn btn-lg btn-primary" type="submit" value="submit">Hinzufügen</button>
+    <p class="mt-5 mb-3 text-muted">&copy; Webtech 2021</p>
+  </form>
+
+
+</main>
+
+
+
+</body>
+</html>

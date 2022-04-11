@@ -4,6 +4,8 @@ package com.restaurant.RestaurantExample;
 import com.sun.istack.Nullable;
 
 import javax.persistence.*;
+import java.sql.Time;
+import java.util.Date;
 
 
 @Entity
@@ -27,19 +29,33 @@ public class Product {
     @Nullable
     private int count;
 
+    @Nullable
+    private Date date;
+
+    @Nullable
+    private Time time;
+
+    @Nullable
+    private int personCount;
+
+    @Nullable
+    private int tableId;
 
 
 
 
 
 
-
-    public Product(int id, String name, double price, String owner, int count) {
+    public Product(int id, String name, double price, String owner, int count, Date date, Time time, int personCount, int tableId) {
         this.name = name;
         this.price = price;
         this.id = id;
         this.owner = owner;
         this.count = 1;
+        this.date = date;
+        this.time = time;
+        this.personCount = personCount;
+        this.tableId = tableId;
     }
 
     public Product() {
@@ -85,5 +101,35 @@ public class Product {
         this.count = count;
     }
 
+    public Date getDate() {
+        return date;
+    }
 
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public Time getTime() {
+        return time;
+    }
+
+    public void setTime(Time time) {
+        this.time = time;
+    }
+
+    public int getPersonCount() {
+        return personCount;
+    }
+
+    public void setPersonCount(int personCount) {
+        this.personCount = personCount;
+    }
+
+    public int getTableId() {
+        return tableId;
+    }
+
+    public void setTableId(int tableId) {
+        this.tableId = tableId;
+    }
 }
